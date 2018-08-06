@@ -34,7 +34,9 @@ class RecipeDetailViewController: UIViewController {
     
     var recipe: Recipe? {
         didSet {
-            updateViews()
+            DispatchQueue.main.async {
+                self.updateViews()
+            }
         }
     }
 

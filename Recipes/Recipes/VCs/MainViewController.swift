@@ -24,15 +24,17 @@ class MainViewController: UIViewController {
     
     // MARK: - Functions
     
-    func filterRecipes(by searchTerm: String?) {
-        let filteredRecipes: [Recipe]
-        guard let userInput = searchTerm else { return }
-        if userInput == "" {
-            filteredRecipes = allRecipes
-        } else {
-            filteredRecipes = allRecipes.filter { $0.instructions.contains(userInput) || $0.name.contains(userInput) }
+    func filterRecipes() {
+        DispatchQueue.main.async {
+            let filteredRecipes: [Recipe]
+            guard let searchTerm = self.searchTextField.text else { return }
+            if searchTerm == "" {
+                filteredRecipes = self.allRecipes
+            } else {
+                filteredRecipes = self.allRecipes.filter { $0.instructions.contains(searchTerm) || $0.name.contains(searchTerm) }
+            }
+            self.filteredRecipes = filteredRecipes
         }
-        self.filteredRecipes = filteredRecipes
     }
     
     // MARK: - Navigation
@@ -48,7 +50,7 @@ class MainViewController: UIViewController {
     
     @IBAction func search(_ sender: Any) {
         resignFirstResponder()
-        filterRecipes(by: searchTextField.text)
+        filterRecipes()
     }
     
     
@@ -63,7 +65,7 @@ class MainViewController: UIViewController {
     let networkClient = RecipesNetworkClient()
     var allRecipes: [Recipe] = [] {
         didSet {
-            filterRecipes(by: searchTextField.text)
+            filterRecipes()
         }
     }
     var recipesTableViewController: RecipesTableViewController? {
