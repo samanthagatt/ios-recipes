@@ -41,7 +41,8 @@ class MainViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "" {
-            recipesTableViewController = segue.destination as? RecipesTableViewController
+            let destVC = segue.destination as! RecipesTableViewController
+            recipesTableViewController = destVC
         }
      }
     

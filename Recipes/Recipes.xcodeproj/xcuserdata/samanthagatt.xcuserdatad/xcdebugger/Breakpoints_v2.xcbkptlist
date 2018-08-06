@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Recipes/VCs/MainViewController.swift"
+            timestampString = "555278101.9136961"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Recipes.MainViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "Recipes"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/samanthagatt/Documents/Lambda%20School%20iOS%20Full%20Time/my%20projects/Networking/ios-recipes/Recipes/Recipes/VCs/MainViewController.swift"
+                  timestampString = "555278101.96921"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "70">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Array&lt;Recipes.Recipe&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Recipes.MainViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "Recipes"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/samanthagatt/Documents/Lambda%20School%20iOS%20Full%20Time/my%20projects/Networking/ios-recipes/Recipes/Recipes/VCs/MainViewController.swift"
+                  timestampString = "555278101.974267"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "25">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
