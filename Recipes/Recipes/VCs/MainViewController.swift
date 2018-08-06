@@ -16,9 +16,9 @@ class MainViewController: UIViewController {
         networkClient.fetchRecipes { (recipes, error) in
             if let error = error {
                 NSLog("Error fetching recipes from network: \(error)")
-            } else {
-                self.allRecipes = recipes ?? []
             }
+            
+            self.allRecipes = recipes ?? []
         }
     }
     
