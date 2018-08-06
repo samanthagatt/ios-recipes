@@ -28,7 +28,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
-                                            <action selector="search:" destination="fte-hU-XEV" eventType="editingDidEnd" id="VPC-4h-BZO"/>
+                                            <action selector="search2:" destination="fte-hU-XEV" eventType="primaryActionTriggered" id="8eu-Bz-6Y4"/>
                                         </connections>
                                     </textField>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="57r-X9-HJo">

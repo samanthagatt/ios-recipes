@@ -22,6 +22,8 @@ class MainViewController: UIViewController {
         }
     }
     
+    
+    
     // MARK: - Functions
     
     func filterRecipes() {
@@ -40,7 +42,7 @@ class MainViewController: UIViewController {
     // MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "" {
+        if segue.identifier == "EmbedRecipeTableView" {
             let destVC = segue.destination as! RecipesTableViewController
             recipesTableViewController = destVC
         }
@@ -49,7 +51,7 @@ class MainViewController: UIViewController {
     
     // MARK: - Actions
     
-    @IBAction func search(_ sender: Any) {
+    @IBAction func search2(_ sender: Any) {
         resignFirstResponder()
         filterRecipes()
     }
