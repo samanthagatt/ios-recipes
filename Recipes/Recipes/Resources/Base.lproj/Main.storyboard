@@ -140,6 +140,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JSZ-xr-K0o"/>
                     </view>
+                    <connections>
+                        <outlet property="recipeLabel" destination="ABI-oo-hYT" id="GXw-P6-SWo"/>
+                        <outlet property="recipeTextField" destination="S4Z-ob-bls" id="N6b-Wa-ZzX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SSb-M3-vji" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
