@@ -14,13 +14,13 @@ class RecipesTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return recipes.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "RecipeCell", for: indexPath)
 
-        // Configure the cell...
+        cell.textLabel?.text = recipes[indexPath.row].name
 
         return cell
     }
@@ -29,6 +29,19 @@ class RecipesTableViewController: UITableViewController {
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        if segue.identifier == "ShowRecipeDetails" {
+            let destVC = segue.destination as! RecipeDetailViewController
+            guard let indexPath = tableView.indexPathForSelectedRow else { return }
+            destVC.recipe = recipes[indexPath.row]
+        }
+    }
+    
+    
+    // MARK: - Properties
+    
+    var recipes: [Recipe] = [] {
+        didSet {
+            tableView.reloadData()
+        }
     }
 }
